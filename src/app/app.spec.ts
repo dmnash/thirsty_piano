@@ -18,6 +18,6 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, thirsty_piano');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, d280_Interactive_World_Map');
   });
 });

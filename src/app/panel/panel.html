@@ -1,0 +1,12 @@
+<div class="panel-banner">
+    <h2 style="color: #ffffff">{{ meta?.name || code || 'Click or hover on a country to view details' }}</h2>
+</div>
+<div class="panel-info" style="color: #ffffff">
+    <ul>
+        <li><strong>Capital:</strong> {{ meta?.capital ?? '—'}}</li>
+        <li><strong>Region:</strong> {{ meta?.region ?? '—'}}</li>
+        <li><strong>Income Level:</strong> {{ meta?.income ?? '—'}}</li>
+        <li><strong>Population:</strong> {{ (indicators?.['SP.POP.TOTL'] | number:'1.0-0') ?? '—'}}</li>
+        <li><strong>GDP:</strong> {{ gdpMillions != null ? (gdpMillions | number:'1.0-0') + ' million USD' : '—'}}</li>
+    </ul>
+</div>

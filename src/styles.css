@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #d7d4e4;
+    font-family: sans-serif;
+}
+
+.map-col, .panel-col {
+    overflow: auto;
+}
+
+app-map svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+app-map svg path {
+    fill: #201f26;
+    stroke: #3f3c4a;
+    stroke-width: 0.5;
+}
+
+app-map svg path:hover {
+    fill: var(--region-color,#201f26)
+}
+
+.map-banner, .panel-banner {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.map-banner {
+    position: relative;
+    background: linear-gradient(to right, transparent, var(--region-color,#2a2831));
+    opacity: 0.95;
+    z-index: 0;
+}
+
+.panel-banner {
+    position: relative;
+    background: var(--region-color,#2a2831);
+    opacity: 0.95;
+    z-index: 3;
+}
+
+.panel-info {
+    position: relative;
+    background: rgb(42,40,49,0.9);
+    opacity: 0.95;
+    z-index: 2;
+    margin: 1rem;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.map-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    max-height: 90vh;
+    margin: 1rem;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    z-index: 1;
+}
